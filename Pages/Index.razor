@@ -1,18 +1,10 @@
 ﻿@page "/"
 
-    <div id="wrapper">
-        @* Add the below codes to apply the range restriction, month range picker with format.
-        Min="StartValue"
-        Max="EndValue"
-        MinDays="5"
-        MaxDays="10"
-        Start="@CalendarView.Year"
-        Depth="@CalendarView.Year"
-        Format="MM yyyy"*@
-        <SfDateRangePicker StartDate="StartValue" EndDate="EndValue"></SfDateRangePicker>
-    </div>
+<div id="wrapper">
+    <SfDateRangePicker StartDate="StartValue" EndDate="EndValue"></SfDateRangePicker>
+</div>
 
-@code{
+@code {
     public DateTime StartValue { get; set; } = new DateTime(2020, 03, 11);
     public DateTime EndValue { get; set; } = new DateTime(2020, 04, 10);
 }

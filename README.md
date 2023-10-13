@@ -1,4 +1,17 @@
+# Create a Blazor DateRangePicker Component
+
 The [Blazor DateRangePicker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker?utm_source=github&utm_medium=listing&utm_campaign=blazor-date-range-picker-github-samples) is a lightweight and mobile-friendly component that allows end users to select start and end dates as a range from a calendar pop-up or by entering the value directly in an HTML input text box.
+
+## Prerequisites
+
+* Visual Studio 2022
+
+## How to run the project
+
+* Checkout this project to a location in your disk.
+* Open the solution file using the Visual Studio 2022.
+* Restore the NuGet packages by rebuilding the solution.
+* Run the project.
 
 ## Features and benefits
 

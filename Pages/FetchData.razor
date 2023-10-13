@@ -1,18 +1,12 @@
 ﻿@page "/fetchdata"
-
-@using DateRangePickerProject.Data
+@using DateRangePickerSample.Data
 @inject WeatherForecastService ForecastService
+
+<PageTitle>Weather forecast</PageTitle>
 
 <h1>Weather forecast</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
-@* Include this " in above code to add custom format *@
-@* Include Start="@CalendarView.Year" & Depth="@CalendarView.Year" in above code to have month range pikcer*@
-@*StartDate="@StartValue"
-    EndDate="@EndValue"
-    Min="@StartValue"
-    Max="@EndValue"
-    Depth="@CalendarView.Month"*@
 
 @if (forecasts == null)
 {
@@ -44,10 +38,10 @@ else
 }
 
 @code {
-    private WeatherForecast[] forecasts;
+    private WeatherForecast[]? forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
     }
 }
